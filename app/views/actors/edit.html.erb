@@ -1,0 +1,18 @@
+<hr>
+
+<%= form_for(@actor) do |a| %>
+    <%= a.label :first_name %>
+    <%= a.text_field(:first_name, {:class => 'form-control'})%><br>
+
+    <%= a.label :last_name %>
+    <%= a.text_field(:last_name, {:class => 'form-control'})%><br>
+
+    <%= a.label :description %>
+    <%= a.text_area(:bio, {:class => 'form-control'})%><br>
+
+    <%= a.label :image %>
+    <%= a.file_field :image %><br>
+
+    <%= a.submit({:class => 'btn btn-primary'}) %>
+
+<% end %>

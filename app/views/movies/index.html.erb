@@ -1,0 +1,24 @@
+<hr>
+
+<div class="container" >
+
+  <p>
+    <%= image_tag("films.jpg", width: '1057px')%>
+    <br>
+  </p>
+  <hr>
+
+  <% @movies.each do |movie|%>
+      <div class="box" >
+        <p><%= image_tag movie.image, size: "300x200" %></p>
+        <div style="height: 60px; width: auto">
+          <h2><%= movie.title %></h2>
+        </div>
+        <p><strong>Released on:</strong> <%= movie.release_year %></p>
+        <div style="height: 80px; width: auto">
+          <p><%= movie.plot %></p>
+        </div>
+        <%= link_to "Read more", movie_path(movie), :class => 'btn btn-primary' %>
+      </div>
+  <% end %>
+</div>

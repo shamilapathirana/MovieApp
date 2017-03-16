@@ -1,0 +1,25 @@
+
+<div class="form">
+<h1>Add new Movie</h1><br>
+
+<hr>
+
+<%= form_for(@movie) do |m| %>
+
+    <%= m.label(:title_of_movie) %>
+    <%= m.text_field(:title, {:placeholder => "Enter movie name",:class => 'form-control'})%><br>
+
+    <%= m.label(:released_year)%>
+    <%= m.text_field(:release_year, {:placeholder => "Enter released year",:class => 'form-control'}) %><br>
+
+    <%= m.label(:plot)%>
+    <%= m.text_area(:plot, {:placeholder => "Enter small description",:class => 'form-control'}) %><br>
+
+    <%= m.label(:image)%>
+    <%= m.file_field :image %><br>
+
+    <%= m.submit({:class => 'btn btn-primary'}) %>
+
+<% end %>
+
+</div>

@@ -1,0 +1,32 @@
+
+  <div class="container">
+    <div class="form">
+
+      <h1>Register now</h1>
+      <hr>
+
+      <%= form_for(@user) do |f|%>
+          <%= f.label(:first_name) %>
+          <%= f.text_field :first_name, :placeholder => "Enter your first name", class: "form-control"%><br>
+
+          <%= f.label(:last_name) %>
+          <%= f.text_field :last_name, :placeholder => "Enter your last name", class: "form-control"%><br>
+
+          <%= f.label(:town) %>
+          <%= f.text_field :town, :placeholder => "Where are you from", class: "form-control"%><br>
+
+          <%= f.label(:e_mail) %>
+          <%= f.email_field :email, :placeholder => "example@mail.com", class: "form-control"%><br>
+
+          <%= f.label(:password) %>
+          <%= f.password_field :password, :placeholder => "Enter password", class: "form-control" %><br>
+
+          <%= f.label(:image) %>
+          <%= f.file_field :image%><br>
+
+          <%= f.submit "Create an account", class: "btn btn-primary" %>
+
+      <% end %>
+
+    </div>
+  </div>

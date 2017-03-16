@@ -1,0 +1,23 @@
+
+<hr>
+<p>
+  <%= image_tag("actors.jpg", width: '1057px')%>
+  <br>
+</p>
+<hr>
+
+<div class="container" >
+      <% @actors.each do |actor| %>
+                <div class="box">
+                  <p><%= image_tag actor.image, size: "300x200" %></p>
+                  <div style="height: 40px; width: auto">
+                  <h3><%= actor.first_name %>  <%= actor.last_name %></h3>
+                  </div>
+                  <div style="height: 90px; width: auto">
+                  <p><%= actor.bio %></p>
+                  </div>
+                  <%= link_to "Read more", actor_path(actor), :class => 'btn btn-primary' %>
+                </div>
+      <% end %>
+</div>
+

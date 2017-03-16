@@ -1,0 +1,26 @@
+<hr>
+<div class="container" >
+    <div class="center-content">
+        <p><%= image_tag @movie.image, size: "700x250" %></p>
+        <h3><%= @movie.title %></h3><br>
+        <h5><%= @movie.release_year %></h5><br>
+        <p><%= @movie.plot %></p><br>
+    </div>
+    <div style="text-align: center">
+      <%= link_to "Edit Details", edit_movie_path(@movie), :class => 'btn btn-warning'%>
+      <%= link_to "Delete Movie", movie_path(@movie), method: :delete,
+                  data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger'%>
+    </div>
+  <hr>
+  <h2>Cast</h2>
+  <hr>
+  <div class="center-content">
+      <% @actors.each do |actor| %>
+          <div class="box">
+            <%= image_tag actor.image, size: "200x150" %>
+            <h4><%= actor.first_name %>  <%= actor.last_name %></h4>
+            <p><%= actor.bio %></p>
+          </div>
+      <% end %>
+  </div>
+</div>

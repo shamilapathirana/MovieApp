@@ -1,0 +1,22 @@
+<div class="form">
+<h1>Add new Actors</h1><br>
+
+<hr>
+
+<%= form_for(@actor) do |a| %>
+    <%= a.label :first_name %>
+    <%= a.text_field(:first_name, {:placeholder => "First name",:class => 'form-control'})%><br>
+
+    <%= a.label :last_name %>
+    <%= a.text_field(:last_name, {:placeholder => "Last name",:class => 'form-control'})%><br>
+
+    <%= a.label :description %>
+    <%= a.text_area(:bio, {:placeholder => "Enter small description",:class => 'form-control'})%><br>
+
+    <%= a.label :image %>
+    <%= a.file_field :image %><br>
+
+    <%= a.submit({:class => 'btn btn-primary'}) %>
+
+<% end %>
+</div>
