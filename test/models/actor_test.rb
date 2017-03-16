@@ -23,3 +23,4 @@ class ActorTest < ActiveSupport::TestCase
   end
 
 end
+     
